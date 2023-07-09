@@ -43,7 +43,7 @@ class WelcomePage extends StatelessWidget {
               child: Center(
                   child: Container(
                       height: MediaQuery.of(context).size.height * 0.5,
-                      padding: EdgeInsets.all(30),
+                      padding: const EdgeInsets.all(30),
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -51,8 +51,8 @@ class WelcomePage extends StatelessWidget {
                             Column(
                               children: [
                                 Container(
-                                  padding: EdgeInsets.only(bottom: 15),
-                                  child: Text(
+                                  padding: const EdgeInsets.only(bottom: 15),
+                                  child: const Text(
                                     'Learning is everything',
                                     style: TextStyle(
                                         fontSize: 30,
@@ -71,15 +71,15 @@ class WelcomePage extends StatelessWidget {
                             ),
                             Container(
                               alignment: Alignment.bottomCenter,
-                              margin: EdgeInsets.only(top: 40),
+                              margin: const EdgeInsets.only(top: 40),
                               child: ElevatedButton(
                                   style: ElevatedButton.styleFrom(
-                                      padding: EdgeInsets.symmetric(
+                                      padding: const EdgeInsets.symmetric(
                                           vertical: 12, horizontal: 80),
-                                      backgroundColor:
-                                          Color.fromARGB(255, 71, 116, 194)),
+                                      backgroundColor: const Color.fromARGB(
+                                          255, 71, 116, 194)),
                                   onPressed: () {},
-                                  child: Text(
+                                  child: const Text(
                                     'Get Start',
                                     style: TextStyle(
                                         fontSize: 22,
