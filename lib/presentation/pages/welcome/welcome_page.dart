@@ -1,7 +1,11 @@
+import 'package:education_app/presentation/core/constant.dart';
+import 'package:education_app/presentation/route/route_name.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class WelcomePage extends StatelessWidget {
-  const WelcomePage({super.key});
+  final constants = Constants();
+  WelcomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +14,7 @@ class WelcomePage extends StatelessWidget {
           preferredSize:
               Size.fromHeight(MediaQuery.of(context).size.height * 0.5),
           child: AppBar(
-              backgroundColor: const Color.fromARGB(255, 71, 116, 194),
+              backgroundColor: constants.theme(context).primaryColor,
               elevation: 0,
               shape: const RoundedRectangleBorder(
                   borderRadius:
@@ -30,8 +34,8 @@ class WelcomePage extends StatelessWidget {
           children: [
             Container(
               height: MediaQuery.of(context).size.height * 0.5,
-              decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 71, 116, 194),
+              decoration: BoxDecoration(
+                color: constants.theme(context).primaryColor,
               ),
             ),
             Container(
@@ -76,9 +80,12 @@ class WelcomePage extends StatelessWidget {
                                   style: ElevatedButton.styleFrom(
                                       padding: const EdgeInsets.symmetric(
                                           vertical: 12, horizontal: 80),
-                                      backgroundColor: const Color.fromARGB(
-                                          255, 71, 116, 194)),
-                                  onPressed: () {},
+                                      backgroundColor: constants
+                                          .theme(context)
+                                          .primaryColor),
+                                  onPressed: () {
+                                    context.go('/${RouteName.homePage}');
+                                  },
                                   child: const Text(
                                     'Get Start',
                                     style: TextStyle(
