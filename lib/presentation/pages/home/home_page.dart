@@ -1,11 +1,8 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:education_app/application/blocs/course/course_bloc.dart';
 import 'package:education_app/presentation/core/constant.dart';
-import 'package:education_app/presentation/pages/course/course_page.dart';
 import 'package:education_app/presentation/route/route_name.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {
@@ -196,7 +193,7 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: GridView.builder(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: imgList.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
@@ -229,7 +226,7 @@ class HomePage extends StatelessWidget {
                         ),
                         Text(
                           imgList[index],
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w600),
                         ),
                         Text(

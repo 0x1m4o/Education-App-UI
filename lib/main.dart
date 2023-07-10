@@ -1,8 +1,6 @@
-import 'package:education_app/application/blocs/course/course_bloc.dart';
 import 'package:education_app/presentation/core/theme.dart';
 import 'package:education_app/presentation/route/app_router.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   runApp(MyApp());
