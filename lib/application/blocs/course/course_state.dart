@@ -14,6 +14,5 @@ class CourseIndex extends CourseState {
     return CourseIndex(index: index ?? this.index);
   }
 
-  @override
   List<Object?> get props => [index];
 }
